@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solution Approved</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 40px;
+        }
+
+        .card {
+            max-width: 450px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: #2ecc71;
+            color: #fff;
+            padding: 12px 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-header span {
+            font-size: 14px;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .card-body h4 {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #777;
+            margin-top: -6px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2ecc71;
+            border: none;
+            color: white;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <div class="card">
+        <div class="card-header">
+            ✅ <span>Solution Approved (60%)</span>
+        </div>
+
+        <div class="card-body">
+            <h4>Selected Solution:</h4>
+
+            <select name="solution">
+                <option selected>Fix the leaky pipe.</option>
+                <option>Replace the damaged section of the pipe</option>
+            </select>
+
+            <div class="note">
+                The leak will be repaired within 22 hours.
+            </div>
+
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

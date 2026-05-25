@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .voting-card {
+            display: flex;
+            width: 750px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .left-panel {
+            background: #2f5f9f;
+            color: #fff;
+            width: 180px;
+            padding: 15px;
+        }
+
+        .left-panel h3 {
+            margin-top: 0;
+        }
+
+        .left-panel img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .right-panel {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .status {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress {
+            width: 65%;
+            height: 100%;
+            background: #2ecc71;
+        }
+
+        .percentage {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .approve {
+            background: #28a745;
+        }
+
+        .reject {
+            background: #dc3545;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post" action="">
+     {% csrf_token %} 
+
+    <div class="voting-card">
+
+        <div class="left-panel">
+            <h3>Voting</h3>
+            <img src="https://via.placeholder.com/150" alt="Pipe Image">
+        </div>
+
+        <div class="right-panel">
+            <div class="status">Residents Voting in Progress</div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <div class="percentage">65% Approval</div>
+
+            <div class="buttons">
+                <button type="submit" name="vote" value="approve" class="approve">
+                    Approve
+                </button>
+
+                <button type="submit" name="vote" value="reject" class="reject">
+                    Reject
+                </button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+</body>
+</html>
